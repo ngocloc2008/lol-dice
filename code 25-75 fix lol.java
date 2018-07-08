@@ -373,11 +373,11 @@ function doBet() {
 					_playSecond = Math.floor((_playTime % (1000 * 60)) / 1000);
 					_speedBet = parseFloat((_bet / _playTime) * 1000);
 					_bet++;
-					// _runSeed++;
-					// if (_runSeed >= 1000) {
-					// _runSeed = 0;
-					// randomizeSeed();
-					// }
+					_runSeed++;
+					 if (_runSeed >= 1000) {
+					 _runSeed = 0;
+					 randomizeSeed();
+					 }
 					_runLog++;
 					if (_runLog >= 1000) {
 						_runLog = 0;
