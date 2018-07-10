@@ -537,30 +537,30 @@ function doBet() {
 										if (_loseStreak == 23) {
 												_prediction = 25;
 												_chance = _prediction
-												_betAmount = 0.00001024*2*1.5;
+												_betAmount = 0.00001024*3*1.5;
 												
 										}
 										if (_loseStreak == 24) {
 												_prediction = 50;
 												_chance = _prediction
-												_betAmount = 0.00002048*2*1.5;
+												_betAmount = 0.00002048*4*1.5;
 										}
 										if (_loseStreak == 25) {
 												_prediction = 25;
 												_chance = _prediction
-												_betAmount = 0.00002048*2*1.5;
+												_betAmount = 0.00002048*4*1.5;
 										}
 										if (_loseStreak == 26) {
 												_prediction = 25;
 												_chance = _prediction
-												_betAmount = 0.00004096*2;
+												_betAmount = 0.00004096*3;
 												
 										
 										}
 										if (_loseStreak == 27) {
 												_prediction = 50;
 												_chance = _prediction
-												_betAmount = 0.00004096*2*2*1.5;
+												_betAmount = 0.00004096*4*1.5;
 										
 										}
 										if (_loseStreak == 28) {
