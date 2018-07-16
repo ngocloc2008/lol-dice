@@ -19,7 +19,7 @@
 		$('#gameContainer').css('display', 'none');
 		$('#frontText').css('display', 'none');
 		$('div[class="tab tab-show"]:nth-child(4)').css('display', 'none');
-		$('#header').html('<div id="left"><input id="baseBetAmount" type="text" value="" style="text-align: center;" placeholder="Base Bet"> <input id="overBalance" type="text" value="" style="text-align: center;" placeholder="Over Balance"> <input id="underBalance" type="text" value="" style="text-align: center;" placeholder="Under Balance"><br><br> <button id="minBet" onclick="minBet();">Min BET</button> <button id="startButton" onclick="startBot();">Start BOT</button> <button id="stopButton" onclick="stopBot();">Stop BOT</button> <button id="resetButton" onclick="resetBot();">Reset BOT</button> <button id="exitButton" onclick="exit();">Exit BOT</button><br><br> <button id="hideStatistics" onclick="hideStatistics();">Hide Statistics</button> <button id="viewStatistics" onclick="viewStatistics();">View Statistics</button> <p id="statistics"> Coin Play: ' + ($('#coin').val()).toUpperCase() + '<br> Time Play: <span id="playDay">0</span>:<span id="playHour">0</span>:<span id="playMinute">0</span>:<span id="playSecond">0</span><br> Speed Bet: <span id="speedBet">0.00</span><br> Balance: <span id="myBalance">0</span><br> Profit: <span id="totalProfit">0.00000000</span><br> Largest Bet: <span id="largestBet">0.00000000</span><br> Bet: <span id="bet">0</span><br> Win: <span id="win">0</span><br> Lose: <span id="lose">0</span><br> Win Streak: <span id="winStreak">0</span><br> Max Win Streak: <span id="maxWinStreak">0</span><br>  Max Lose Streak: <span id="loseStreak">0</span><br>Lose Streak: <span id="maxLoseStreak">0</span></p> <p id="author"><h3 style="margin: 0px;">Dice BOT vòng lặp xoắn ốc  vốn 1/10 000 000 </h3> Strategy by <span id="strategy"></span><br> Develop by <a href="https://www.facebook.com/mhqbdiceplayer" target="_blank" style="color: #fff;">Mai Hoang Quoc Bao</a><br> Donate to developer via <a href="https://luckygames.io/user/mhqbdicer" target="_blank"  style="color: #fff;">Send tips</a></p></div> <div id="right"> <button id="hideLog" onclick="hideLog();">Hide Log</button> <button id="viewLog" onclick="viewLog();">View Log</button> <div id="showLog"></div></div> <div id="end"><button id="hideLog" onclick="hideChart();">Hide Chart</button> <button id="viewChart" onclick="viewChart();">View Chart</button> <div id="chart"> </div></div>');
+		$('#header').html('<div id="left"><input id="baseBetAmount" type="text" value="" style="text-align: center;" placeholder="Base Bet"> <input id="overBalance" type="text" value="" style="text-align: center;" placeholder="Over Balance"> <input id="underBalance" type="text" value="" style="text-align: center;" placeholder="Under Balance"><br><br> <button id="minBet" onclick="minBet();">Min BET</button> <button id="startButton" onclick="startBot();">Start BOT</button> <button id="stopButton" onclick="stopBot();">Stop BOT</button> <button id="resetButton" onclick="resetBot();">Reset BOT</button> <button id="exitButton" onclick="exit();">Exit BOT</button><br><br> <button id="hideStatistics" onclick="hideStatistics();">Hide Statistics</button> <button id="viewStatistics" onclick="viewStatistics();">View Statistics</button> <p id="statistics"> Coin Play: ' + ($('#coin').val()).toUpperCase() + '<br> Time Play: <span id="playDay">0</span>:<span id="playHour">0</span>:<span id="playMinute">0</span>:<span id="playSecond">0</span><br> Speed Bet: <span id="speedBet">0.00</span><br> Balance: <span id="myBalance">0</span><br> Profit: <span id="totalProfit">0.00000000</span><br> Largest Bet: <span id="largestBet">0.00000000</span><br> Bet: <span id="bet">0</span><br> Win: <span id="win">0</span><br> Lose: <span id="lose">0</span><br> Win Streak: <span id="winStreak">0</span><br> Max Win Streak: <span id="maxWinStreak">0</span><br>  Max Lose Streak: <span id="loseStreak">0</span><br>Lose Streak: <span id="maxLoseStreak">0</span></p> <p id="author"><h3 style="margin: 0px;">Dice BOT vòng lặp xoắn ốc(v20- chậm mà chắc 1/1 triệu hoặc 1/ 100.000 </h3> Strategy by <span id="strategy"></span><br> Develop by <a href="https://www.facebook.com/mhqbdiceplayer" target="_blank" style="color: #fff;">Mai Hoang Quoc Bao</a><br> Donate to developer via <a href="https://luckygames.io/user/mhqbdicer" target="_blank"  style="color: #fff;">Send tips</a></p></div> <div id="right"> <button id="hideLog" onclick="hideLog();">Hide Log</button> <button id="viewLog" onclick="viewLog();">View Log</button> <div id="showLog"></div></div> <div id="end"><button id="hideLog" onclick="hideChart();">Hide Chart</button> <button id="viewChart" onclick="viewChart();">View Chart</button> <div id="chart"> </div></div>');
 		$('#header').css('width', '80%');
 		$('#header').css('background', 'none');
 		$('#header').css('margin', 'auto');
@@ -427,27 +427,27 @@ function doBet() {
 										if (_loseStreak == 3) {
 											_chance = 85;
 											_prediction = _chance
-												_betAmount = _previous_betAmount * 10;
+												_betAmount = _previous_betAmount * 15;
 										}
 										if (_loseStreak == 4) {
 											_chance = 55;
 											_prediction = _chance
-											_betAmount = _previous_betAmount * 5;
+											_betAmount = _previous_betAmount * 2.5;
 										}
 										if (_loseStreak == 5) {
 											_chance = 75;
 											_prediction = _chance
-											_betAmount = _previous_betAmount * 5;
+											_betAmount = _previous_betAmount * 4.5;
 										}
 										if (_loseStreak == 6) {
 											_chance = 85;
 											_prediction = _chance
-												_betAmount = _previous_betAmount * 15;
+												_betAmount = _previous_betAmount *10;
 										}
 										if (_loseStreak == 7) {
 											_chance = 55;
 											_prediction = _chance
-												_betAmount = _previous_betAmount * 3;
+												_betAmount = _previous_betAmount * 2.5;
 										}
 										if (_loseStreak == 8) {
 											_chance = 75;
@@ -458,47 +458,47 @@ function doBet() {
 										if (_loseStreak == 9) {
 										_chance = 85;
 											_prediction = _chance
-												_betAmount = _previous_betAmount * 15;
+												_betAmount = _previous_betAmount * 11;
 										
 										}
 										if (_loseStreak == 10) {
 											_chance = 55;
 											_prediction = _chance
-												_betAmount = _previous_betAmount * 5;
+												_betAmount = _previous_betAmount * 3;
 										
 										}
 										if (_loseStreak == 11) {
 										_chance = 75;
 											_prediction = _chance
-												_betAmount = _previous_betAmount * 5;
+												_betAmount = _previous_betAmount * 4;
 										
 										}if (_loseStreak == 12) {
 											_chance = 85;
 											_prediction = _chance
-												_betAmount = _baseBetAmount *20;
+												_betAmount = _baseBetAmount *12;
 										
 										}
 										if (_loseStreak == 13) {
 											_chance = 55;
 											_prediction = _chance
-												_betAmount = _previous_betAmount * 15;
+												_betAmount = _previous_betAmount * 5;
 										
 										}
 										if (_loseStreak == 14) {
 											_chance = 75;
 											_prediction = _chance
-												_betAmount = _previous_betAmount * 5;
+												_betAmount = _previous_betAmount * 4;
 										
 										}
-										if (_loseStreak == 85) {
-												_chance = 15;
+										if (_loseStreak == 15) {
+												_chance = 85;
 												_prediction = _chance
-												_betAmount = _previous_betAmount * 9;
+												_betAmount = _previous_betAmount * 13;
 										
 										}if (_loseStreak == 16) {
 												_chance = 55;
 												_prediction = _chance
-												_betAmount = _previous_betAmount * 20;
+												_betAmount = _previous_betAmount * 4;
 										
 										}if (_loseStreak == 17) {
 											_chance = 75;
@@ -508,13 +508,13 @@ function doBet() {
 										}if (_loseStreak == 18) {
 											_chance = 85;
 											_prediction = _chance
-												_betAmount = _previous_betAmount * 20;
+												_betAmount = _previous_betAmount * 15;
 										
 										}
 										if (_loseStreak == 19) {
 											_chance = 50;
 											_prediction = _chance
-												_betAmount = _previous_betAmount * 25;
+												_betAmount = _previous_betAmount * 5;
 										
 										}
 										if (_loseStreak == 20) {
@@ -526,13 +526,13 @@ function doBet() {
 										if (_loseStreak == 21) {
 											_chance = 85;
 											_prediction = _chance
-												_betAmount = _previous_betAmount * 20;
+												_betAmount = _previous_betAmount * 15;
 										
 										}
 										if (_loseStreak == 22) {
 											_chance = 50;
 											_prediction = _chance
-												_betAmount = _previous_betAmount * 30;
+												_betAmount = _previous_betAmount * 5;
 										
 										}
 										if (_loseStreak == 23) {
@@ -544,13 +544,13 @@ function doBet() {
 										if (_loseStreak == 24) {
 											_chance = 85;
 											_prediction = _chance
-												_betAmount = _previous_betAmount * 25;
+												_betAmount = _previous_betAmount * 20;
 										
 										}
 										if (_loseStreak == 25) {
 											_chance = 55;
 											_prediction = _chance
-												_betAmount = _previous_betAmount * 40;
+												_betAmount = _previous_betAmount * 5;
 										
 										}
 										if (_loseStreak == 26) {
@@ -567,7 +567,7 @@ function doBet() {
 										}if (_loseStreak == 28) {
 											_chance = 55;
 											_prediction = _chance
-												_betAmount = _previous_betAmount * 50;
+												_betAmount = _previous_betAmount * 5;
 										
 										}
 										if (_loseStreak == 29) {
@@ -585,7 +585,7 @@ function doBet() {
 										if (_loseStreak == 31) {
 											_chance = 55;
 											_prediction = _chance
-												_betAmount = _previous_betAmount * 2;
+												_betAmount = _previous_betAmount * 3;
 										
 										}
 										if (_loseStreak == 32) {
@@ -602,7 +602,7 @@ function doBet() {
 										}if (_loseStreak == 34) {
 											_chance = 50;
 											_prediction = _chance
-												_betAmount = _previous_betAmount * 60;
+												_betAmount = _previous_betAmount * 4;
 										
 										}
 										if (_loseStreak == 35) {
