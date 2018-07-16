@@ -1,0 +1,82 @@
+// ==UserScript==
+// @name         Hệ Thống Tự Động Roll Free + Cày Điểm REWARD POINTS + Lottery + Bounus Betting  v3.0
+// @namespace    Sửa bởi haibrvt
+// @version      3.0
+// @description  thu nghiem
+// @author       haibrvt
+// @match        https://freebitco.in/*
+// @grant        none
+// ==/UserScript==
+(function() {
+    'use strict';
+        var numMinutes = 10;
+window.setTimeout("document.location.reload();", numMinutes*60*1000);
+var body = $('body');
+
+var points = {};
+
+    if ($('#free_play_form_button').is(':visible')){
+	     if ($('#play_without_captchas_button').is(':visible')){
+            setTimeout(function(){ $('#play_without_captchas_button').click();},2000);
+        }
+        setTimeout(function(){ $('#free_play_form_button').click();},3000);
+        //document.getElementById("lottery_tickets_purchase_count").value = "2";
+        //setTimeout(function(){ $('#purchase_lottery_tickets_button').click();},2000);
+    }
+    if ($('.close-reveal-modal').is(':visible'))
+        setTimeout(function(){ $('.close-reveal-modal').click(); },2000);
+
+    var reward = {};
+    reward.select = function() {
+        reward.points = parseInt($('.user_reward_points').text().replace(',',""));
+
+        if ($('#bonus_span_free_points').length === 0) {
+            if (reward.points < 12) {
+                console.log("waiting for points");
+            }
+            else if (reward.points < 120) {
+                    console.log("waiting for points 60");
+                    RedeemRPProduct('free_points_1');
+                }
+            else if (reward.points < 600) {
+                    console.log("waiting for points 120");
+                    RedeemRPProduct('free_points_10');
+                }
+            else if (reward.points < 1200) {
+                    console.log("waiting for points 600");
+                    RedeemRPProduct('free_points_50');
+                }
+            else {
+                RedeemRPProduct('free_points_100');
+            }
+
+        }
+        if ($('#bonus_span_fp_bonus').length === 0)
+                if (reward.points >= 4400)
+                    RedeemRPProduct('fp_bonus_1000');
+    };
+
+    body.prepend(
+        $('<div/>').attr('style',"position:fixed;bottom:70px;left:0;z-index:999;width:350px;background-color:black;color: white; text-align: left;")
+            .append(
+                $('<div/>').attr('id','autofaucet')
+                    .append($('<p/>').attr('style','text-decoration:underline;').text("Freebitco.in auto Chỉnh sửa bởi haibrvt"))
+                    .append($('<p/>')
+                            .append($('<p/>').text("Balance: "+parseFloat($('#balance').text().replace(',',""))+" BTC"))
+                            .append($('<p/>').text("REWARD POINTS: "+parseInt($('.user_reward_points').text().replace(',',""))))
+                            .append($('<p/>').text("Lottery Tickets: "+parseInt($('#user_lottery_tickets').text().replace(',',""))))
+                        .append($('<p/>').text("Chức năng:"))
+                        .append($('<p/>').text("Tự động bỏ captcha + roll"))
+                        .append($('<p/>').text("Tự cày reward points"))
+                        .append($('<p/>').text("RP >= 4400 thì tăng 1000% bouns roll "))
+						.append($('<p/>').text("Ví doge nếu muốn ủng hộ mình:"))
+						.append($('<p/>').text("D7h1a6znw1S15kA1kDs9JcNtaUNsnVgLhf"))
+						.append($('<p/>').text("Link ref: https://freebitco.in/?r=2233070"))
+                    )
+            )
+    ).prepend($('<style/>')
+        .text("#autofaucet p { margin: 0; margin-left: 2px;  text-align: left; }")
+    )
+    setTimeout(reward.select,1000);
+    setInterval(reward.select,60000);
+})();
