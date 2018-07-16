@@ -437,7 +437,7 @@ function doBet() {
 										if (_loseStreak == 5) {
 											_chance = 75;
 											_prediction = _chance
-											_betAmount = _previous_betAmount * 3;
+											_betAmount = _previous_betAmount * 5;
 										}
 										if (_loseStreak == 6) {
 											_chance = 85;
@@ -452,7 +452,7 @@ function doBet() {
 										if (_loseStreak == 8) {
 											_chance = 75;
 											_prediction = _chance
-												_betAmount = _previous_betAmount * 3;
+												_betAmount = _previous_betAmount * 5;
 										
 										}
 										if (_loseStreak == 9) {
@@ -470,7 +470,7 @@ function doBet() {
 										if (_loseStreak == 11) {
 										_chance = 75;
 											_prediction = _chance
-												_betAmount = _previous_betAmount * 3;
+												_betAmount = _previous_betAmount * 5;
 										
 										}if (_loseStreak == 12) {
 											_chance = 85;
@@ -487,7 +487,7 @@ function doBet() {
 										if (_loseStreak == 14) {
 											_chance = 75;
 											_prediction = _chance
-												_betAmount = _previous_betAmount * 3;
+												_betAmount = _previous_betAmount * 5;
 										
 										}
 										if (_loseStreak == 85) {
@@ -503,7 +503,7 @@ function doBet() {
 										}if (_loseStreak == 17) {
 											_chance = 75;
 											_prediction = _chance
-												_betAmount = _previous_betAmount * 3;
+												_betAmount = _previous_betAmount * 5;
 										
 										}if (_loseStreak == 18) {
 											_chance = 85;
@@ -520,7 +520,7 @@ function doBet() {
 										if (_loseStreak == 20) {
 											_chance = 75;
 											_prediction = _chance
-												_betAmount = _previous_betAmount * 3;
+												_betAmount = _previous_betAmount * 5;
 										
 										}
 										if (_loseStreak == 21) {
@@ -538,7 +538,7 @@ function doBet() {
 										if (_loseStreak == 23) {
 											_chance = 75;
 											_prediction = _chance
-												_betAmount = _baseBetAmount * 3;
+												_betAmount = _baseBetAmount * 5;
 										
 										}
 										if (_loseStreak == 24) {
@@ -556,7 +556,7 @@ function doBet() {
 										if (_loseStreak == 26) {
 											_chance =75;
 											_prediction = _chance
-												_betAmount = _previous_betAmount * 3;
+												_betAmount = _previous_betAmount * 5;
 										
 										}
 										if (_loseStreak == 27) {
@@ -573,7 +573,7 @@ function doBet() {
 										if (_loseStreak == 29) {
 											_chance = 75;
 											_prediction = _chance
-												_betAmount = _previous_betAmount * 2;
+												_betAmount = _previous_betAmount * 5;
 										
 										}
 										if (_loseStreak == 30) {
@@ -608,7 +608,7 @@ function doBet() {
 										if (_loseStreak == 35) {
 											_chance = 75;
 											_prediction = _chance
-												_betAmount = _previous_betAmount * 3;
+												_betAmount = _previous_betAmount * 5;
 										
 										}
 										
