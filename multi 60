@@ -1,0 +1,50 @@
+chance=math.random(60*1000, 65*1000)/1000.0
+resetstats()
+nextbet = 0.001 
+win=0
+lose=0
+nextbet = base 
+bethigh = false
+bethigh = true
+low = 0
+high = 0
+countwin=0
+countlose=0
+rollcount = 20
+target = balance + balance / 150
+function dobet()
+if balance>target then
+stop()
+    print("-------------------")
+	print("-----Code by NguyenLocNguyen-----")
+	print("----Please send tip----")
+	print("--- id 191788726---")
+	print("-------------------")
+end
+if(bets%2==0) then
+bethigh=true
+else
+bethigh=false
+end
+if(win) then
+countwin+=1
+else
+countlose+=1
+end
+if rollcount == 20 then
+rollcount = 0
+resetseed();
+else
+rollcount = rollcount + 1
+end
+if win then
+chance=math.random(60*1000, 65*1000)/1000.0
+nextbet=previousbet/2
+if currentstreak >= 3 then
+nextbet=base
+end
+else
+nextbet=previousbet*2
+chance=math.random(60*1000, 65*1000)/1000.0
+end	
+end
