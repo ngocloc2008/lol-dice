@@ -1,0 +1,90 @@
+chance = math.random(5, 10)
+base = 0.001
+nextbet = base 
+bethigh = false
+bethigh = true
+low = 0
+high = 0
+countwin=0
+countlose=0
+target = balance + balance/100  --Profit Target
+function dobet()
+if balance>target then
+stop()
+    print("-------------------")
+    print("-----Code by NguyenLocNguyen-----")
+    print("----Please send tip----")
+    print("--- id 191788726---")
+    print("-------------------")
+end
+if(bets%3==0) then
+bethigh=true
+else
+bethigh=false
+end
+if(win) then
+countwin+=1
+else
+countlose+=1
+end
+chance = math.random(5, 10)
+multiplier = 1
+multiplier2 = 1.4
+multiplier3 = 1.6
+multiplier4 = 1.8
+
+if win then
+nextbet = base
+else
+nextbet = previousbet * multiplier
+end
+balance2=balance
+print("=======================")
+print("===== Completed ======")
+print("=======================")
+print("codeby NguyenLocNguyen ")
+if currentstreak <= -1 then
+chance = math.random(5, 10)
+nextbet = previousbet*multiplier
+end
+if currentstreak <= -20 then
+chance = math.random(5, 10)
+nextbet = previousbet*multiplier
+end
+
+if currentstreak <= -21 then
+chance = math.random(5, 10)
+nextbet = previousbet*multiplier
+end
+if currentstreak <= -30 then
+chance = math.random(5, 10)
+nextbet = previousbet*1.1
+end
+
+if currentstreak <= -40 then
+chance = math.random(10, 15)
+nextbet = previousbet*multiplier2
+end
+if currentstreak <= -41 then
+chance = math.random(20, 30)
+nextbet = previousbet*multiplier3
+end
+if currentstreak <= -60 then
+chance = math.random(20, 30)
+nextbet = previousbet*multiplier3
+end
+if currentstreak <= -61 then
+chance = math.random(30, 40)
+nextbet = previousbet*multiplier4
+end
+if currentstreak <= -100 then
+chance = math.random(30, 40)
+nextbet = previousbet*multiplier4
+end
+if currentstreak <= -101 then
+chance = math.random(40, 50)
+nextbet = previousbet*2
+end
+end
+end
+end
