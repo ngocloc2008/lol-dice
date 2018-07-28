@@ -58,7 +58,7 @@ nextbet = previousbet*multiplier
 end
 if currentstreak <= -30 then
 chance = math.random(5, 10)
-nextbet = previousbet*1.1
+nextbet = previousbet*1.05
 end
 
 if currentstreak <= -40 then
@@ -69,19 +69,19 @@ if currentstreak <= -41 then
 chance = math.random(20, 30)
 nextbet = previousbet*multiplier3
 end
-if currentstreak <= -60 then
+if currentstreak <= -50 then
 chance = math.random(20, 30)
 nextbet = previousbet*multiplier3
 end
-if currentstreak <= -61 then
+if currentstreak <= -51 then
 chance = math.random(30, 40)
 nextbet = previousbet*multiplier4
 end
-if currentstreak <= -100 then
+if currentstreak <= -55 then
 chance = math.random(30, 40)
 nextbet = previousbet*multiplier4
 end
-if currentstreak <= -101 then
+if currentstreak <= -60 then
 chance = math.random(40, 50)
 nextbet = previousbet*2
 end
