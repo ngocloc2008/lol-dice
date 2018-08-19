@@ -1,0 +1,122 @@
+resetstats()
+resetseed()
+base=0.00000001
+	nextbet=base
+chance = math.random(5, 25)
+	target= balance*0.2
+	balance2=balance
+	nbet=base*2
+	f=0
+	g=balance
+	tg2=0
+	rollcount=0
+maxbet = 0
+timer = math.random (50000,60000)
+multiplier = 1
+	function dobet()
+if bets >= 9999 then
+print('TAM DUNG '..timer..'ms.')
+sleep(timer)
+resetstats()
+resetseed()
+end
+
+if nextbet>maxbet then
+maxbet=nextbet
+end
+tg2=profit
+print("------------------------------------------------------------------------------------------------")
+print("Target = " .. target)
+print("goodluck")
+print("Max bet = " .. maxbet)
+print("Total bet  "..(bets).." BETS")
+print("------------------------------------------------------------------------------------------------")
+print("Start Balance: "..string.format("%.8f",g))print("Current Balance: "..string.format("%.8f",balance))
+print("Highest Balance: "..string.format("%.8f",balance2))
+print("Profit.............="..string.format("%.8f",profit).." = "..string.format("%.2f",tg2).."%")
+print("next to the win")
+
+	if nextbet >= 100 then
+	sleep(1000)
+	end
+	if(nbet<base) then
+	nbet=base*1
+	end
+	
+	if math.floor(lastBet.roll)%2==0 then
+	bethigh=true
+	else
+	bethigh=false
+	end
+	if profit >= target then
+	stop()
+print("--------------------> WIN<--------------------------")	
+
+	end
+	if win then
+chance = math.random(5,10)
+	nextbet=base
+		if balance > balance2 then
+		f=0
+		nbet=base*1
+		balance2 = balance
+		else
+		nbet=balance2-balance
+		if nbet < base*1 then
+		nbet=base*1	
+		end
+		end
+	else
+if currentstreak <= -1 then
+chance=chance = math.random(5,10)
+nextbet = previousbet*1
+end
+if currentstreak <= -2 then
+if nbet < (balance2-balance) then
+chance=60.00
+nextbet=(balance2-balance)*2
+else
+nextbet=nbet
+end
+end 
+if currentstreak <= -3 then
+chance=chance = math.random(5,35)
+nextbet = base
+end
+if currentstreak <= -4 then
+chance=chance = chance = math.random(5,25)
+nextbet = previousbet*1
+end
+if currentstreak <= -5 then
+chance=chance = math.random(5,25)
+nextbet = previousbet*1
+end
+if currentstreak <= -6 then
+chance=math.random(5,25)
+nextbet = previousbet*1
+end
+if currentstreak <= -7 then
+chance= math.random(5,25)
+nextbet = previousbet*1
+end
+if currentstreak <= -8 then
+chance=math.random(5,25)
+nextbet = previousbet*1
+end
+if currentstreak <= -9 then
+chance=math.random(5,25)
+nextbet = previousbet*1
+end
+if currentstreak <= -10 then
+chance=math.random(5,25)
+nextbet = previousbet*1
+end
+if currentstreak <= -11 then
+chance=math.random(5,25)
+nextbet = previousbet*1
+end
+if currentstreak <= -12 then
+nextbet = previousbet*1
+end 
+end
+end
