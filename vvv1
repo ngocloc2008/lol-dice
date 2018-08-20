@@ -80,66 +80,58 @@ nextbet=nbet
 end
 end 
 if currentstreak <= -3 then
-chance = math.random(5,10)
+chance = math.random(5,25)
 nextbet = base
 end
 if currentstreak <= -4 then
-chance=math.random(5,10)
+chance=math.random(5,25)
 nextbet = previousbet*1
 end
 if currentstreak <= -5 then
-chance=math.random(5,10)
+chance=math.random(5,25)
 nextbet = previousbet*1
 end
 if currentstreak <= -6 then
-chance=math.random(10,15)
+chance=math.random(10,25)
 nextbet = previousbet*1
 end
 if currentstreak <= -7 then
-chance=math.random(10,15)
+chance=math.random(10,25)
 nextbet = previousbet*1
 end
 if currentstreak <= -8 then
-chance=math.random(10,15)
+chance=math.random(10,25)
 nextbet = previousbet*1
 end
 if currentstreak <= -9 then
-chance=math.random(10,15)
+chance=math.random(10,25)
 nextbet = previousbet*1
 end
 if currentstreak <= -10 then
-chance=math.random(15,20)
+chance=math.random(10,25)
 nextbet = previousbet*1
 end
 if currentstreak <= -11 then
-chance=math.random(15,20)
+chance=math.random(10,25)
 nextbet = previousbet*1
 end
 if currentstreak <= -13 then
 if nbet < (balance2-balance) then
 chance=60.00
-nextbet=(balance2-balance)*2
+nextbet=(balance2-balance)*1.5
 else
 nextbet=nbet
 end
 end 
 if currentstreak <= -14 then
-chance=math.random(5,10)
+chance=math.random(5,25)
 nextbet = base
-end
-if currentstreak <= -25 then
-if nbet < (balance2-balance) then
-chance=60.00
-nextbet=(balance2-balance)*2
-else
-nextbet=nbet
-end
 end 
-if currentstreak <= -26 then
+if currentstreak <= -20then
 chance=math.random(10,15)
 nextbet = base*2
 end
-if currentstreak <= -13 then
+if currentstreak <= -21 then
 if nbet < (balance2-balance) then
 chance=60.00
 nextbet=(balance2-balance)*2
@@ -147,11 +139,11 @@ else
 nextbet=nbet
 end
 end 
-if currentstreak <= -35 then
+if currentstreak <= -22 then
 chance=math.random(5,10)
 nextbet = base*4
 end
-if currentstreak <= -36 then
+if currentstreak <= -23 then
 nextbet = previousbet*1
 end 
 end
