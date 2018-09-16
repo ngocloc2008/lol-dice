@@ -1,0 +1,91 @@
+resetstats()
+resetseed()
+base=0.0000001
+	nextbet=base
+chance = math.random(65, 80)
+	target= balance*0.2
+	balance2=balance
+	nbet=base*5
+	f=0
+	g=balance
+	tg2=0
+	rollcount=0
+maxbet = 0
+timer = math.random (500000,600000)
+multiplier = 1
+	function dobet()
+if bets >= 9999 then
+print('TAM DUNG '..timer..'ms.')
+sleep(timer)
+resetstats()
+resetseed()
+end
+
+if nextbet>maxbet then
+maxbet=nextbet
+end
+tg2=profit*100/g
+print("------------------------------------------------------------------------------------------------")
+print("Target = " .. target)
+print("------------------------------------------------------------------------------------------------")
+print("Max bet = " .. maxbet)
+print("Total bet  "..(bets).." BETS")
+print("------------------------------------------------------------------------------------------------")
+print("Start Balance: "..string.format("%.8f",g))print("Current Balance: "..string.format("%.8f",balance))
+print("Highest Balance: "..string.format("%.8f",balance2))
+print("Profit.............="..string.format("%.8f",profit).." = "..string.format("%.2f",tg2).."%")
+print("------------------------------------------------------------------------------------------------")
+print("Code By Duy Duong")
+print("------------------------------------------------------------------------------------------------")
+	if nextbet >= 100 then
+	sleep(1000)
+	end
+	if(nbet<base) then
+	nbet=base*5
+	end
+	
+	if math.floor(lastBet.roll)%2==0 then
+	bethigh=true
+	else
+	bethigh=false
+	end
+	if profit >= target then
+	stop()
+print("--------------------> WIN<--------------------------")	
+
+	end
+	if win then
+chance = math.random(65, 80)
+	nextbet=base
+		if balance > balance2 then
+		f=0
+		nbet=base*5
+		balance2 = balance
+		else
+		nbet=balance2-balance
+		if nbet < base*5 then
+		nbet=base*5	
+		end
+		end
+	else
+if currentstreak <= -1 then
+chance=90
+nextbet = previousbet*3
+end
+if currentstreak <= -2 then
+if nbet < (balance2-balance) then
+chance=90.5555
+nextbet=(balance2-balance)*5
+else
+nextbet=nbet
+end
+end 
+if currentstreak <= -3 then
+chance=90
+nextbet = previousbet*10
+end
+if currentstreak <= -4 then
+nextbet = base
+end 
+end
+end
