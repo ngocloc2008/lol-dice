@@ -1,6 +1,7 @@
 chance=math.random(75*1000, 90*1000)/1000.0
 resetstats()
-nextbet = 0.00001 
+base = 0.0001
+nextbet = base
 win=0
 lose=0
 nextbet = base 
@@ -11,7 +12,17 @@ high = 0
 countwin=0
 countlose=0
 rollcount = 20
+
+target = balance + balance / 500
 function dobet()
+if balance>target then
+stop()
+    print("-------------------")
+	print("-----Code by NguyenLocNguyen-----")
+	print("----Please send tip----")
+	print("--- id 191788726---")
+	print("-------------------")
+end
 if(bets%2==0) then
 bethigh=true
 else
@@ -30,12 +41,12 @@ rollcount = rollcount + 1
 end
 if win then
 chance=math.random(75*1000, 90*1000)/1000.0
-nextbet=previousbet/10
-if currentstreak >= 1 then
-nextbet=base
+nextbet=previousbet*1.1
+if currentstreak >= -2 then
+nextbet=previousbet*1.2
 end
 else
-nextbet=previousbet*0.2
+nextbet=previousbet*0.5
 chance=math.random(75*1000, 90*1000)/1000.0
 end	
 end
