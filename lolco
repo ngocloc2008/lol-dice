@@ -1,93 +1,51 @@
+chance=math.random(76*1000, 82*1000)/1000.0
 resetstats()
-resetseed()
-base=0.01
-	nextbet=base
-chance = math.random(5, 20)
-	target= balance*0.2
-	balance2=balance
-	nbet=base*5
-	f=0
-	g=balance
-	tg2=0
-	rollcount=0
-maxbet = 0
-timer = math.random (500000,600000)
-multiplier = 1
-	function dobet()
-if bets >= 9999 then
-print('TAM DUNG '..timer..'ms.')
-sleep(timer)
-resetstats()
-resetseed()
+base = 0.001 
+nextbet = base 
+win=0
+lose=0
+
+bethigh = false
+bethigh = true
+low = 0
+high = 0
+countwin=0
+countlose=0
+rollcount = 20
+target = balance + balance / 150
+function dobet()
+if balance>target then
+stop()
+    print("-------------------")
+	print("-----Code by NguyenLocNguyen-----")
+	print("----Please send tip----")
+	print("--- id 191788726---")
+	print("-------------------")
 end
-
-if nextbet>maxbet then
-maxbet=nextbet
-end
-tg2=profit*100/g
-print("------------------------------------------------------------------------------------------------")
-print("Target = " .. target)
-
-print("Max bet = " .. maxbet)
-print("Total bet  "..(bets).." BETS")
-
-print("Start Balance: "..string.format("%.8f",g))print("Current Balance: "..string.format("%.8f",balance))
-print("Highest Balance: "..string.format("%.8f",balance2))
-print("Profit.............="..string.format("%.8f",profit).." = "..string.format("%.2f",tg2).."%")
-
-
-	if nextbet >= 100 then
-	sleep(1000)
-	end
-	if(nbet<base) then
-	nbet=base*5
-	end
-	
-	if math.floor(lastBet.roll)%2==0 then
-	bethigh=true
-	else
-	bethigh=false
-	end
-	if profit >= target then
-	stop()
-print("--------------------> WIN<--------------------------")	
-
-	end
-	if win then
-chance = math.random(50, 55)
-	nextbet=base
-		if balance > balance2 then
-		f=0
-		nbet=base*5
-		balance2 = balance
-		else
-		nbet=balance2-balance
-		if nbet < base*5 then
-		nbet=base*5	
-		end
-		end
-	else
-if currentstreak <= -1 then
-chance=50.55
-nextbet = previousbet*1
-end
-if currentstreak <= -2 then
-if nbet < (balance2-balance) then
-chance=50
-nextbet=(balance2-balance)*1.2
+if(bets%2==0) then
+bethigh=true
 else
-nextbet=nbet
+bethigh=false
 end
-end 
-if currentstreak <= -3 then
-chance=50
-nextbet = previousbet*1.6
+if(win) then
+countwin+=1
+else
+countlose+=1
 end
-if currentstreak <= -4 then
-nextbet = previousbet*1.7
+if rollcount == 20 then
+rollcount = 0
+resetseed();
+else
+rollcount = rollcount + 1
 end
-if currentstreak <= -5 then
-nextbet = base
-end 
+if win then
+chance=math.random(76*1000, 82*1000)/1000.0
+nextbet=previousbet*1.2
+if currentstreak >= 5 then
+nextbet=base
 end
+else
+nextbet=previousbet*0.9
+chance=math.random(76*1000, 82*1000)/1000.0
+end	
 end
