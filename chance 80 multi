@@ -1,0 +1,66 @@
+chance=math.random(80*1000, 82*1000)/1000.0
+resetstats()
+base =balance/100000
+nextbet = base 
+
+
+
+
+	target= balance*1.1
+	balance2=balance
+	nbet=base*4
+	f=0
+	g=balance
+	tg2=0
+	rollcount=0
+maxbet = 0
+win=0
+lose=0
+
+bethigh = false
+bethigh = true
+low = 0
+high = 0
+countwin=0
+countlose=0
+rollcount = 20
+target = balance + balance / 150
+function dobet()
+if balance>target then
+stop()
+    print("-------------------")
+	print("-----Code by NguyenLocNguyen-----")
+	print("----Please send tip----")
+	print("--- id 191788726---")
+	print("-------------------")
+end
+if(bets%2==0) then
+bethigh=true
+else
+bethigh=false
+end
+if(win) then
+countwin+=1
+else
+countlose+=1
+end
+if rollcount == 20 then
+rollcount = 0
+resetseed();
+else
+rollcount = rollcount + 1
+end
+if win then
+chance=math.random(80*1000, 82*1000)/1000.0
+nextbet=previousbet*1.2
+ if balance2 < balance then
+balance2=balance
+nextbet=base
+end
+else
+
+nextbet=previousbet*0.8
+chance=math.random(80*1000, 82*1000)/1000.0
+
+end	
+end
