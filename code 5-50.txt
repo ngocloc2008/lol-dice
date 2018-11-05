@@ -1,0 +1,165 @@
+chance = math.random(5, 50)
+base = 0.001
+nextbet = base 
+bethigh = false
+bethigh = true
+low = 0
+high = 0
+countwin=0
+countlose=0
+target = balance + balance/10  --Profit Target
+function dobet()
+if balance>target then
+stop()
+    print("-------------------")
+    print("-----Code by NguyenLocNguyen-----")
+    print("----Please send tip----")
+    print("--- id 191788726---")
+    print("-------------------")
+end
+if(bets%3==0) then
+bethigh=true
+else
+bethigh=false
+end
+if(win) then
+countwin+=1
+else
+countlose+=1
+end
+chance = math.random(5, 7)
+multiplier = math.random(1.5*100, 1.68*100)
+if win then
+nextbet = base
+else
+nextbet = previousbet * multiplier
+end
+balance2=balance
+print("=======================")
+print("===== Completed ======")
+print("=======================")
+print("codeby NguyenLocNguyen ")
+
+if currentstreak <= -1 then
+chance = math.random(5, 50)
+nextbet = previousbet
+end
+if currentstreak <= -2 then
+chance = math.random(5, 50)
+nextbet = previousbet*multiplier
+end
+if currentstreak <= -3 then
+chance = math.random(5, 50)
+nextbet = previousbet*multiplier
+end
+if currentstreak <= -4then
+chance = math.random(5, 50)
+nextbet = previousbet*multiplier
+end
+if currentstreak <= -5 then
+chance = math.random(5, 50)
+nextbet = previousbet*multiplier
+end
+if currentstreak <= -6 then
+chance = math.random(5, 55)
+nextbet = previousbet*multiplier
+end
+if currentstreak <= -7 then
+chance = math.random(5, 50)
+nextbet = previousbet
+end
+if currentstreak <= -8 then
+chance = math.random(5, 50)
+nextbet = previousbet*multiplier
+end
+if currentstreak <= -9 then
+chance = math.random(5, 50)
+nextbet = previousbet*multiplier
+end
+if currentstreak <= -10then
+chance = math.random(5, 50)
+nextbet = previousbet*multiplier
+end
+if currentstreak <= -11 then
+chance = math.random(5, 50)
+nextbet = previousbet*multiplier
+end
+if currentstreak <= -12 then
+chance = math.random(5, 55)
+nextbet = previousbet*multiplier
+end
+if currentstreak <= -13 then
+chance = math.random(5, 50)
+nextbet = previousbet
+end
+if currentstreak <= -14 then
+chance = math.random(5, 50)
+nextbet = previousbet*multiplier
+end
+if currentstreak <= -15 then
+chance = math.random(5, 50)
+nextbet = previousbet*multiplier
+end
+if currentstreak <= -16then
+chance = math.random(5, 50)
+nextbet = previousbet*multiplier
+end
+if currentstreak <= -17 then
+chance = math.random(5, 50)
+nextbet = previousbet*multiplier
+end
+if currentstreak <= -18 then
+chance = math.random(5, 55)
+nextbet = previousbet*multiplier
+end
+if currentstreak <= -19 then
+chance = math.random(5, 50)
+nextbet = previousbet
+end
+if currentstreak <= -20 then
+chance = math.random(5, 50)
+nextbet = previousbet*multiplier
+end
+if currentstreak <= -21 then
+chance = math.random(5, 50)
+nextbet = previousbet*multiplier
+end
+if currentstreak <= -22then
+chance = math.random(5, 50)
+nextbet = previousbet*multiplier
+end
+if currentstreak <= -23 then
+chance = math.random(5, 50)
+nextbet = previousbet*multiplier
+end
+if currentstreak <= -24 then
+chance = math.random(5, 55)
+nextbet = previousbet*multiplier
+end
+if currentstreak <= -25 then
+chance = math.random(5, 50)
+nextbet = previousbet
+end
+if currentstreak <= -26 then
+chance = math.random(5, 50)
+nextbet = previousbet*multiplier
+end
+if currentstreak <= -27then
+chance = math.random(5, 50)
+nextbet = previousbet*multiplier
+end
+if currentstreak <= -28then
+chance = math.random(5, 50)
+nextbet = previousbet*multiplier
+end
+if currentstreak <= -29 then
+chance = math.random(5, 50)
+nextbet = previousbet*multiplier
+end
+if currentstreak <= -30 then
+chance = math.random(5, 55)
+nextbet = previousbet*multiplier
+end
+end
+end
+end
